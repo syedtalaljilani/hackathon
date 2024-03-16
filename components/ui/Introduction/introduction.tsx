@@ -32,7 +32,7 @@ const Introduction: React.FC = () => {
     let bodyElements: JSX.Element[] = [];
     phrase.split(" ").forEach((word, i) => {
       const letters = splitLetters(word);
-      bodyElements.push(<pre className='text-2xl sm:text-4xl mr-4 leading-[80px] sm:leading-[80px]' key={word + "_" + i}>{letters}</pre>)
+      bodyElements.push(<pre className='text-5xl sm:text-7xl mr-4 leading-[100px] sm:leading-[100px]' key={word + "_" + i}>{letters}</pre>)
     })
     return bodyElements;
   }

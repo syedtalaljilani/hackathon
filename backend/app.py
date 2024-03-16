@@ -81,31 +81,31 @@ CORS(app, origins="http://localhost:3000", supports_credentials=True)
 @app.route('/script', methods=['POST'])
 def script():
     # Extract data from the request's JSON body
-    print("hi")
-    request_data = request.json
-    print(request_data)
-    topic = request_data.get('topic')
-    duration = request_data.get('duration')
-    genre = request_data.get('genre')
-    instructions = request_data.get('instructions')
-    language = request_data.get('language')
-    images = request_data.get('images')
+    # print("hi")
+    # request_data = request.json
+    # print(request_data)
+    # topic = request_data.get('topic')
+    # duration = request_data.get('duration')
+    # genre = request_data.get('genre')
+    # instructions = request_data.get('instructions')
+    # language = request_data.get('language')
+    # images = request_data.get('images')
    
-    # Instantiate TextAI
-    text_ai = TextAI()
+    # # Instantiate TextAI
+    # text_ai = TextAI()
     # Generate the script using TextAI
-    generated_script = text_ai.predict(
-        prompt,
-        topic=topic,
-        duration=duration,
-        genre=genre,
-        instructions=instructions,
-        language=language,
-        images=images,
-        syntax=syntax,
-    )
-    print(generated_script)
-    '''generated_script={
+    # generated_script = text_ai.predict(
+    #     prompt,
+    #     topic=topic,
+    #     duration=duration,
+    #     genre=genre,
+    #     instructions=instructions,
+    #     language=language,
+    #     images=images,
+    #     syntax=syntax,
+    # )
+    # print(generated_script)
+    generated_script={
     "video_title": "Unlocking the Secrets of Human Psychology",
     "video_description": "Discover the fascinating world of human psychology with these 5 mind-blowing facts. Dive deep into the complexities of the human mind and learn what makes us tick.",
     "scripts": {
@@ -130,7 +130,7 @@ def script():
             "image": "A heartwarming scene of two silhouettes embracing in a gesture of empathy and understanding, against a backdrop of serene nature and soft lighting." 
         }
     }
-    }'''
+    }
     return generated_script
 ######################
 
